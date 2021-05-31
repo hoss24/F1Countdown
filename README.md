@@ -12,7 +12,7 @@ An iOS App that displays the time until the next F1 race, and current standings.
 
 **App Screenshots**
 
-<img src="Screenshots/1.jpg" width="225"> <img src="Screenshots/2.jpg" width="225">
+<img src="Screenshots/1.png" width="225"> <img src="Screenshots/2.png" width="225">
 
 **Links:**
 
