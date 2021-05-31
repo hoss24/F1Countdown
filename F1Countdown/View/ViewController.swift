@@ -24,9 +24,13 @@ class ViewController: UIViewController{
         // Do any additional setup after loading the view.
         scheduleManager.delegate = self
         loadingView.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         scheduleManager.fetchData(year: "2021")
         loadingView.showUniversalLoadingView(true, loadingText: "Loading...")
     }
+    
     func updateTimeRemaining(raceDate: Date) {
         let now = Date()
         let calendar = Calendar.current

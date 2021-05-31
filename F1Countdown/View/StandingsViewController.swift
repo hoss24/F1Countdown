@@ -18,11 +18,14 @@ class StandingsViewController: UITableViewController{
         super.viewDidLoad()
         loadingView.delegate = self
         driverStandingsManager.delegate = self
-        driverStandingsManager.fetchData(year: "2021")
-        loadingView.showUniversalLoadingView(true, loadingText: "Loading...")
-        //present(activityViewController, animated: true, completion: hideLoading)
         tableView.register(UINib(nibName: "StandingCell", bundle: nil), forCellReuseIdentifier: "Cell")
         tableView.allowsSelection = false
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        driverStandingsLoaded = []
+        driverStandingsManager.fetchData(year: "2021")
+        loadingView.showUniversalLoadingView(true, loadingText: "Loading...")
     }
 
     // MARK: - Table view data source
@@ -46,9 +49,8 @@ class StandingsViewController: UITableViewController{
         cell.driverLabel.textColor = driverStandingsLoaded[indexPath.row].teamTextColor
         
         cell.pointsLabel.text = driverStandingsLoaded[indexPath.row].points
-
         return cell
-        }
+    }
 }
 
 extension StandingsViewController: DriverStandingsManagerDelegate{
