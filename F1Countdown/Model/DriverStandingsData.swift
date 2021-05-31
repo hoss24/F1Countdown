@@ -8,14 +8,16 @@
 import Foundation
 //use to format data
 struct DriverStandingsData: Codable{
-    let MRData: MRData
+    let MRData: MRDataStandings
 }
 
-struct MRData: Codable {
+struct MRDataStandings: Codable {
+    //driver standings data
     let total: String
     let StandingsTable: StandingsTable
 }
 
+//driver standings data
 struct StandingsTable: Codable{
     let season: String
     let StandingsLists: [StandingsLists]
@@ -32,7 +34,7 @@ struct DriverStandings: Codable{
     let Driver: Driver
     let Constructors: [Constructors]
 }
-//MRData.StandingsTable.StandingsLists[0].DriverStandings[0].Driver.givenName == first place driver given name
+
 struct Driver: Codable{
     let givenName: String
     let familyName: String
@@ -41,3 +43,5 @@ struct Driver: Codable{
 struct Constructors: Codable{
     let name: String
 }
+
+

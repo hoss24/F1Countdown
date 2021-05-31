@@ -8,17 +8,125 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Countdown-->
+        <!--Countdown to Next Race-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="F1Countdown" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="prM-Mb-j7T">
+                                <rect key="frame" x="0.0" y="118" width="414" height="112"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Azerbaijan Grand Prix" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpw-Tz-vxZ">
+                                        <rect key="frame" x="72" y="0.0" width="270.5" height="31"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="26"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Baku, Azerbaijan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Cy-RV-VBm">
+                                        <rect key="frame" x="109.5" y="41" width="195.5" height="30.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jun 6, 2021 at 7:00 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kpi-p3-OjA">
+                                        <rect key="frame" x="72" y="81.5" width="270.5" height="30.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94117647058823528" green="0.95294117647058818" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JKX-Dp-gkY">
+                                <rect key="frame" x="0.0" y="280" width="414" height="266"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="firstBaseline" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eDX-bz-2Y6">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="82"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1F-1m-Wsd">
+                                                <rect key="frame" x="0.0" y="0.0" width="202" height="82"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="70"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XiW-r7-VwU">
+                                                <rect key="frame" x="212" y="41.5" width="202" height="30.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="firstBaseline" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="64V-FQ-gTQ">
+                                        <rect key="frame" x="0.0" y="92" width="414" height="82"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qax-YB-Jsm">
+                                                <rect key="frame" x="0.0" y="0.0" width="202" height="82"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="70"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m48-Tr-rSU">
+                                                <rect key="frame" x="212" y="41.5" width="202" height="30.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="firstBaseline" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6dz-Yx-c6h">
+                                        <rect key="frame" x="0.0" y="184" width="414" height="82"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="55" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6o-Kb-nm9">
+                                                <rect key="frame" x="0.0" y="0.0" width="202" height="82"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="70"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zvn-yB-pbI">
+                                                <rect key="frame" x="212" y="41.5" width="202" height="30.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94117647058823528" green="0.95294117647058818" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="eDX-bz-2Y6" firstAttribute="leading" secondItem="JKX-Dp-gkY" secondAttribute="leading" id="3ZH-mG-jdt"/>
+                                    <constraint firstAttribute="trailing" secondItem="64V-FQ-gTQ" secondAttribute="trailing" id="DcU-F3-IDQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="eDX-bz-2Y6" secondAttribute="trailing" id="Gh4-29-oqg"/>
+                                    <constraint firstItem="6dz-Yx-c6h" firstAttribute="leading" secondItem="JKX-Dp-gkY" secondAttribute="leading" id="dcS-Ew-hFV"/>
+                                    <constraint firstItem="64V-FQ-gTQ" firstAttribute="leading" secondItem="JKX-Dp-gkY" secondAttribute="leading" id="qTo-YB-30w"/>
+                                    <constraint firstAttribute="trailing" secondItem="6dz-Yx-c6h" secondAttribute="trailing" id="tvz-Y8-vbx"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="prM-Mb-j7T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="H6P-PL-oeG"/>
+                            <constraint firstItem="JKX-Dp-gkY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PTk-hm-AjB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JKX-Dp-gkY" secondAttribute="trailing" id="PsU-Nb-Ucc"/>
+                            <constraint firstItem="JKX-Dp-gkY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="g3L-8M-7WC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="prM-Mb-j7T" secondAttribute="trailing" id="mCD-Ra-QYk"/>
+                            <constraint firstItem="prM-Mb-j7T" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="q7N-jR-Onz"/>
+                            <constraint firstItem="JKX-Dp-gkY" firstAttribute="top" secondItem="prM-Mb-j7T" secondAttribute="bottom" constant="50" id="v7x-tn-lOc"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Countdown" id="Tjx-Qx-GVA"/>
+                    <navigationItem key="navigationItem" title="Countdown to Next Race" id="Tjx-Qx-GVA"/>
+                    <connections>
+                        <outlet property="dateTimeLabel" destination="Kpi-p3-OjA" id="PaC-5P-S9h"/>
+                        <outlet property="daysRemainingLabel" destination="Y1F-1m-Wsd" id="lvp-hr-Ozl"/>
+                        <outlet property="hoursRemainingLabel" destination="Qax-YB-Jsm" id="8bF-hS-dER"/>
+                        <outlet property="localityCountryLabel" destination="3Cy-RV-VBm" id="Zp8-dI-EV4"/>
+                        <outlet property="minutesRemainingLabel" destination="T6o-Kb-nm9" id="nMR-An-qzy"/>
+                        <outlet property="raceNameLabel" destination="mpw-Tz-vxZ" id="RzV-eJ-Hzn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -47,11 +155,17 @@
         <scene sceneID="MBi-8Q-tLu">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="r5l-XU-KM3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Countdown" image="clock" catalog="system" id="r4G-fj-HOT"/>
+                    <tabBarItem key="tabBarItem" title="Countdown" image="clock" catalog="system" id="r4G-fj-HOT">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3LF-1U-uXb">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.094117647060000004" blue="0.0039215686269999999" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -66,11 +180,17 @@
         <scene sceneID="bt3-0c-Dgu">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sVg-9Q-jvC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Standings" image="list.number" catalog="system" id="SIZ-bF-iKo"/>
+                    <tabBarItem key="tabBarItem" title="Standings" image="list.number" catalog="system" id="SIZ-bF-iKo">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="n2v-k8-BSL">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.094117647060000004" blue="0.0039215686269999999" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -89,7 +209,15 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5Ka-LM-n1i">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="1" green="0.094117647060000004" blue="0.0039215686269999999" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="r5l-XU-KM3" kind="relationship" relationship="viewControllers" id="xdl-Qk-QcU"/>

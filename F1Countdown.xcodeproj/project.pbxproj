@@ -19,6 +19,10 @@
 		91A44C552660391000F4FDC9 /* DriverStandingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A44C542660391000F4FDC9 /* DriverStandingsModel.swift */; };
 		91A44C672661107C00F4FDC9 /* StandingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A44C652661107B00F4FDC9 /* StandingCell.swift */; };
 		91A44C682661107C00F4FDC9 /* StandingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91A44C662661107B00F4FDC9 /* StandingCell.xib */; };
+		91A44C7326626AEF00F4FDC9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A44C7226626AEF00F4FDC9 /* Extensions.swift */; };
+		91A44C7626626B8600F4FDC9 /* ScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A44C7526626B8600F4FDC9 /* ScheduleModel.swift */; };
+		91A44C7926627B5900F4FDC9 /* ScheduleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A44C7826627B5900F4FDC9 /* ScheduleManager.swift */; };
+		91A44C7E26627C7100F4FDC9 /* ScheduleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A44C7D26627C7100F4FDC9 /* ScheduleData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		91A44C542660391000F4FDC9 /* DriverStandingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverStandingsModel.swift; sourceTree = "<group>"; };
 		91A44C652661107B00F4FDC9 /* StandingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingCell.swift; sourceTree = "<group>"; };
 		91A44C662661107B00F4FDC9 /* StandingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StandingCell.xib; sourceTree = "<group>"; };
+		91A44C7226626AEF00F4FDC9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		91A44C7526626B8600F4FDC9 /* ScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleModel.swift; sourceTree = "<group>"; };
+		91A44C7826627B5900F4FDC9 /* ScheduleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleManager.swift; sourceTree = "<group>"; };
+		91A44C7D26627C7100F4FDC9 /* ScheduleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +94,10 @@
 				91A44C4B266029A400F4FDC9 /* DriverStandingsData.swift */,
 				91A44C542660391000F4FDC9 /* DriverStandingsModel.swift */,
 				91A44C48265FFE4300F4FDC9 /* DriverStandingsManager.swift */,
+				91A44C7D26627C7100F4FDC9 /* ScheduleData.swift */,
+				91A44C7526626B8600F4FDC9 /* ScheduleModel.swift */,
+				91A44C7826627B5900F4FDC9 /* ScheduleManager.swift */,
+				91A44C7226626AEF00F4FDC9 /* Extensions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -173,10 +185,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				91A44C37265FDB0E00F4FDC9 /* ViewController.swift in Sources */,
+				91A44C7326626AEF00F4FDC9 /* Extensions.swift in Sources */,
+				91A44C7626626B8600F4FDC9 /* ScheduleModel.swift in Sources */,
 				91A44C49265FFE4300F4FDC9 /* DriverStandingsManager.swift in Sources */,
+				91A44C7E26627C7100F4FDC9 /* ScheduleData.swift in Sources */,
 				91A44C552660391000F4FDC9 /* DriverStandingsModel.swift in Sources */,
 				91A44C502660368C00F4FDC9 /* StandingsViewController.swift in Sources */,
 				91A44C33265FDB0E00F4FDC9 /* AppDelegate.swift in Sources */,
+				91A44C7926627B5900F4FDC9 /* ScheduleManager.swift in Sources */,
 				91A44C672661107C00F4FDC9 /* StandingCell.swift in Sources */,
 				91A44C35265FDB0E00F4FDC9 /* SceneDelegate.swift in Sources */,
 				91A44C4C266029A500F4FDC9 /* DriverStandingsData.swift in Sources */,
