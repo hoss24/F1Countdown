@@ -17,12 +17,15 @@ class ViewController: UIViewController{
     
     var scheduleManager = ScheduleManager()
     var scheduleLoaded = [ScheduleModel]()
+    var loadingView = LoadingView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         scheduleManager.delegate = self
+        loadingView.delegate = self
         scheduleManager.fetchData(year: "2021")
+        loadingView.showUniversalLoadingView(true, loadingText: "Loading...")
     }
     func updateTimeRemaining(raceDate: Date) {
         let now = Date()
@@ -35,6 +38,8 @@ class ViewController: UIViewController{
         hoursRemainingLabel.text = ("\(hoursRemaining)")
         minutesRemainingLabel.text = ("\(minutesRemaining)")
     }
+    
+
 
 }
 
@@ -50,6 +55,7 @@ extension ViewController: ScheduleManagerDelegate{
                       dateStyle: .medium,
                       timeStyle: .medium)
                     self.updateTimeRemaining(raceDate: race.dateTime)
+                    self.loadingView.hideLoading()
                     return
                 }
             }
@@ -57,5 +63,14 @@ extension ViewController: ScheduleManagerDelegate{
     }
     func didFailWithError(error: Error) {
         print(error)
+    }
+}
+
+extension ViewController: LoadingViewDelegate {
+    func didCreateLoadingView(_ loadingView: UIView) {
+        view.addSubview(loadingView)
+    }
+    func finishLoadingView(_ existingView: UIView?) {
+        existingView?.removeFromSuperview()
     }
 }

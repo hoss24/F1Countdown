@@ -12,12 +12,15 @@ class StandingsViewController: UITableViewController{
     
     var driverStandingsManager = DriverStandingsManager()
     var driverStandingsLoaded = [DriverStandingsModel]()
+    var loadingView = LoadingView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadingView.delegate = self
         driverStandingsManager.delegate = self
         driverStandingsManager.fetchData(year: "2021")
-        
+        loadingView.showUniversalLoadingView(true, loadingText: "Loading...")
+        //present(activityViewController, animated: true, completion: hideLoading)
         tableView.register(UINib(nibName: "StandingCell", bundle: nil), forCellReuseIdentifier: "Cell")
         tableView.allowsSelection = false
     }
@@ -44,11 +47,8 @@ class StandingsViewController: UITableViewController{
         
         cell.pointsLabel.text = driverStandingsLoaded[indexPath.row].points
 
-    
-        //cell.textLabel?.text = driverStandingsLoaded[indexPath.row]
         return cell
-    }
-
+        }
 }
 
 extension StandingsViewController: DriverStandingsManagerDelegate{
@@ -57,11 +57,21 @@ extension StandingsViewController: DriverStandingsManagerDelegate{
             for driver in driverStandings {
                 self.driverStandingsLoaded.append(driver)
                 self.tableView.reloadData()
+                self.loadingView.hideLoading()
             }
         }
     }
     func didFailWithError(error: Error) {
         print(error)
+    }
+}
+
+extension StandingsViewController: LoadingViewDelegate {
+    func didCreateLoadingView(_ loadingView: UIView) {
+        view.addSubview(loadingView)
+    }
+    func finishLoadingView(_ existingView: UIView?) {
+        existingView?.removeFromSuperview()
     }
 }
 

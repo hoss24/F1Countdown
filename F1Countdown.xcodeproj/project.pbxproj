@@ -23,6 +23,7 @@
 		91A44C7626626B8600F4FDC9 /* ScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A44C7526626B8600F4FDC9 /* ScheduleModel.swift */; };
 		91A44C7926627B5900F4FDC9 /* ScheduleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A44C7826627B5900F4FDC9 /* ScheduleManager.swift */; };
 		91A44C7E26627C7100F4FDC9 /* ScheduleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A44C7D26627C7100F4FDC9 /* ScheduleData.swift */; };
+		91A44C83266492E800F4FDC9 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A44C82266492E700F4FDC9 /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		91A44C7526626B8600F4FDC9 /* ScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleModel.swift; sourceTree = "<group>"; };
 		91A44C7826627B5900F4FDC9 /* ScheduleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleManager.swift; sourceTree = "<group>"; };
 		91A44C7D26627C7100F4FDC9 /* ScheduleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleData.swift; sourceTree = "<group>"; };
+		91A44C82266492E700F4FDC9 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				91A44C7D26627C7100F4FDC9 /* ScheduleData.swift */,
 				91A44C7526626B8600F4FDC9 /* ScheduleModel.swift */,
 				91A44C7826627B5900F4FDC9 /* ScheduleManager.swift */,
+				91A44C82266492E700F4FDC9 /* LoadingView.swift */,
 				91A44C7226626AEF00F4FDC9 /* Extensions.swift */,
 			);
 			path = Model;
@@ -195,6 +198,7 @@
 				91A44C7926627B5900F4FDC9 /* ScheduleManager.swift in Sources */,
 				91A44C672661107C00F4FDC9 /* StandingCell.swift in Sources */,
 				91A44C35265FDB0E00F4FDC9 /* SceneDelegate.swift in Sources */,
+				91A44C83266492E800F4FDC9 /* LoadingView.swift in Sources */,
 				91A44C4C266029A500F4FDC9 /* DriverStandingsData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
