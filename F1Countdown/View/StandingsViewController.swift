@@ -23,7 +23,9 @@ class StandingsViewController: UITableViewController{
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        driverStandingsLoaded = []
+        driverStandingsLoaded.removeAll()
+        tableView.reloadData()
+        tableView.setContentOffset(.zero, animated: true)
         driverStandingsManager.fetchData(year: "2021")
         loadingView.showUniversalLoadingView(true, loadingText: "Loading...")
     }
