@@ -16,7 +16,6 @@ class ViewController: UIViewController{
     @IBOutlet var minutesRemainingLabel: UILabel!
     
     var scheduleManager = ScheduleManager()
-    var scheduleLoaded = [ScheduleModel]()
     var loadingView = LoadingView()
 
     override func viewDidLoad() {
@@ -27,7 +26,9 @@ class ViewController: UIViewController{
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        scheduleManager.fetchData(year: "2021")
+        DispatchQueue.global().async {
+            self.scheduleManager.fetchData(year: "2021")
+        }
         loadingView.showUniversalLoadingView(true, loadingText: "Loading...")
     }
     
@@ -48,7 +49,7 @@ class ViewController: UIViewController{
 }
 
 extension ViewController: ScheduleManagerDelegate{
-    func didUpdateSchedule(_ scheduleManager: ScheduleManager, schedule: [ScheduleModel]) {
+    func didUpdateSchedule(schedule: [ScheduleModel]) {
         DispatchQueue.main.async {
             for race in schedule {
                 if race.dateTime > Date() {

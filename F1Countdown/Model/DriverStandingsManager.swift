@@ -8,7 +8,7 @@
 import Foundation
 
 protocol DriverStandingsManagerDelegate{
-    func didUpdateDriverStandings(_ driverStandingsManager: DriverStandingsManager, driverStandings: [DriverStandingsModel])
+    func didUpdateDriverStandings(driverStandings: [DriverStandingsModel])
     func didFailWithError(error: Error)
 }
 
@@ -36,8 +36,7 @@ struct DriverStandingsManager {
                     //parse data from JSON format
                     if let driverStandings = parseJSON(safeData){
                         //want to send back to standingsViewController but not tie to specific
-                        delegate?.didUpdateDriverStandings(self, driverStandings: driverStandings)
-                        //wvc is delegate
+                        delegate?.didUpdateDriverStandings(driverStandings: driverStandings)
                     }
                 }
             }

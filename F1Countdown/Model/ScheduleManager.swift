@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ScheduleManagerDelegate{
-    func didUpdateSchedule(_ scheduleManager: ScheduleManager, schedule: [ScheduleModel])
+    func didUpdateSchedule(schedule: [ScheduleModel])
     func didFailWithError(error: Error)
 }
 
@@ -36,8 +36,7 @@ struct ScheduleManager {
                     //parse data from JSON format
                     if let schedule = parseJSON(safeData){
                         //want to send back to standingsViewController but not tie to specific
-                        delegate?.didUpdateSchedule(self, schedule: schedule)
-                        //wvc is delegate
+                        delegate?.didUpdateSchedule(schedule: schedule)
                     }
                 }
             }

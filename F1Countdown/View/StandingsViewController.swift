@@ -26,7 +26,9 @@ class StandingsViewController: UITableViewController{
         driverStandingsLoaded.removeAll()
         tableView.reloadData()
         tableView.setContentOffset(.zero, animated: true)
-        driverStandingsManager.fetchData(year: "2021")
+        DispatchQueue.global().async {
+            self.driverStandingsManager.fetchData(year: "2021")
+        }
         loadingView.showUniversalLoadingView(true, loadingText: "Loading...")
     }
 
@@ -56,7 +58,7 @@ class StandingsViewController: UITableViewController{
 }
 
 extension StandingsViewController: DriverStandingsManagerDelegate{
-    func didUpdateDriverStandings(_ driverStandingsManager: DriverStandingsManager, driverStandings: [DriverStandingsModel]) {
+    func didUpdateDriverStandings(driverStandings: [DriverStandingsModel]) {
         DispatchQueue.main.async {
             for driver in driverStandings {
                 self.driverStandingsLoaded.append(driver)
